@@ -5,6 +5,8 @@ import Zero from './components/Zero';
 import HeroSections from './components/HeroSections';
 import Services from './components/Services';
 import ScrollTopButton from './components/ScrollTopButton';
+import Social from './components/Social';
+import 'remixicon/fonts/remixicon.css';
 import './App.css'
 
 function App() {
@@ -15,6 +17,7 @@ function App() {
       <Zero />
       <Services />
       <ScrollTopButton />
+      <Social />
     </>
   )
 }
