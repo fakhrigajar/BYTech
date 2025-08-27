@@ -15,21 +15,21 @@
 }
 
 .services-wrapper {
- background-image: url("/images/background.jpg");
- background-size: cover;
- background-position: center;
  width: 100%;
- min-height: 100vh;
  padding: 60px 15px;
 }
 
 .flip-card {
  perspective: 1000px;
+ margin: 10px auto;
+ /* mərkəzləşdirmək üçün auto margin */
+ max-width: 260px;
+ /* maksimum eni sabitləşdir */
 }
 
 .flip-card-inner {
  position: relative;
- width: 90%;
+ width: 100%;
  height: 360px;
  transition: transform 0.8s;
  transform-style: preserve-3d;
@@ -42,7 +42,7 @@
 .flip-card-front,
 .flip-card-back {
  position: absolute;
- width: 90%;
+ width: 100%;
  height: 100%;
  border-radius: 10px;
  overflow: hidden;
@@ -56,7 +56,8 @@
 
 .flip-card-front img,
 .flip-card-back img {
- width: 100%;
+ width: 120px;
+ /* sabit ölçü */
  height: 120px;
  object-fit: cover;
 }
@@ -75,4 +76,15 @@
  font-size: 14px;
  color: #333;
  margin-top: 8px;
+}
+
+@media (max-width: 576px) {
+ .row.justify-content-center {
+  justify-content: center;
+ }
+
+ .flip-card {
+  width: 90%;
+  max-width: 260px;
+ }
 }
