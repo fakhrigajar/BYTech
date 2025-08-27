@@ -13,7 +13,7 @@ function Zero() {
       <p className="text-p mt-3 w-75 fs-5 fw-semibold">
        ByTech Şirkətinin məqsədi uzun müddət beynəlxalq standartlara əsaslanan, stabil və peşəkar fəaliyyəti nəticəsində əldə etdiyi müştəri etibarını qoruyub saxlamaq, müştərilərə əməkdaşlar tərəfindən peşəkar xidmətin göstərilməsi, son texnoloji nailiyyətlər əsasında qurulan avadanlıqların və həllərin təklifi, etibarlı satış və servis xidmətləri göstərməkdir.
       </p>
-      <button className="btn btn-primary mt-3 fs-5">Ətraflı</button>
+      <a href='#services' className="btn btn-primary mt-3 fs-5">Ətraflı</a>
      </div>
      <div className="col-md-5 text-center">
       <img src={Zeroimg} alt="Zero" className="img-fluid col-md-12" />

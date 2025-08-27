@@ -36,10 +36,9 @@ export default function Header() {
      <div className="collapse navbar-collapse justify-content-between" id="navbarContent">
       <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
        <li className="nav-item"><a className="nav-link fw-bold" href="#">Ana Səhifə</a></li>
-       <li className="nav-item"><a className="nav-link fw-bold" href="#">Xidmətlər</a></li>
-       <li className="nav-item"><a className="nav-link fw-bold" href="#">Vakansiya</a></li>
+       <li className="nav-item"><a className="nav-link fw-bold" href="#services">Xidmətlər</a></li>
        <li className="nav-item"><a className="nav-link fw-bold" href="#">Haqqımızda</a></li>
-       <li className="nav-item"><a className="nav-link fw-bold" href="#">Admin</a></li>
+       <li className="nav-item"><a className="nav-link fw-bold" href="#">Vakansiya</a></li>
        <li className="nav-item"><a className="nav-link fw-bold" href="#">Əlaqə</a></li>
       </ul>
       <div className="d-flex align-items-center gap-3">
