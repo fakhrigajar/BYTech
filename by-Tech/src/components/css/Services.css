@@ -11,7 +11,7 @@
 }
 
 [data-bs-theme="dark"] .dark-color {
- background-color: #212529 !important;
+ background: #212529 !important;
 }
 
 [data-bs-theme="dark"] .services-container {
