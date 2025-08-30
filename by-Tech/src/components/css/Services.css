@@ -10,8 +10,21 @@
  margin-top: -20px;
 }
 
+[data-bs-theme="dark"] .dark-color {
+ background-color: #212529 !important;
+}
+
 [data-bs-theme="dark"] .services-container {
  background-color: #1C1C27;
+}
+
+[data-bs-theme="dark"] .flip-card-front,
+[data-bs-theme="dark"] .flip-card-back {
+ background-color: #1C1C27;
+}
+
+[data-bs-theme="dark"] .flip-card-back p {
+ color: white;
 }
 
 .services-wrapper {
@@ -22,9 +35,7 @@
 .flip-card {
  perspective: 1000px;
  margin: 10px auto;
- /* mərkəzləşdirmək üçün auto margin */
  max-width: 260px;
- /* maksimum eni sabitləşdir */
 }
 
 .flip-card-inner {
@@ -57,7 +68,6 @@
 .flip-card-front img,
 .flip-card-back img {
  width: 120px;
- /* sabit ölçü */
  height: 120px;
  object-fit: cover;
 }

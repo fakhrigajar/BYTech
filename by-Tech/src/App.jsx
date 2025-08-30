@@ -6,6 +6,9 @@ import HeroSections from './components/HeroSections';
 import Services from './components/Services';
 import ScrollTopButton from './components/ScrollTopButton';
 import Social from './components/Social';
+import Preference from './components/Preference';
+import SwiperComponent from './components/SwiperComponent';
+import Offer from './components/Offer';
 import 'remixicon/fonts/remixicon.css';
 import './App.css'
 
@@ -14,10 +17,13 @@ function App() {
     <>
       <Header />
       <HeroSections />
+      <SwiperComponent />
       <Zero />
       <Services />
       <ScrollTopButton />
       <Social />
+      <Preference />
+      <Offer />
     </>
   )
 }

@@ -184,11 +184,9 @@ function Services() {
         </div>
       </div>
 
-      <section className="services-wrapper"
+      <section className="services-wrapper dark-color"
         style={{
-          backgroundImage: `url(${İmage3})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center'
+          background: "linear-gradient(135deg, #4795A0, #083A5F)"
         }}>
         <div className="container">
           <div className="row justify-content-center">
