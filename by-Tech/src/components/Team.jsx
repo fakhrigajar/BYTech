@@ -7,7 +7,7 @@ import img2 from "../assets/asgarov.jpg"
 function Team() {
  return (
   <>
-   <div className='container-fluid box mt-5 p-5'>
+   <div className='container-fluid box mt-5 p-5 team-container'>
     <h1 className='text-white text-center fs-2'>Komandamız</h1>
     <div className='d-flex gap-5 justify-between mt-5 box-card-container'>
 

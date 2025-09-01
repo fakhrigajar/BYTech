@@ -7,6 +7,7 @@
  width: 340px;
  height: 350px;
  margin-top: 20px;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .box-card div {
@@ -21,4 +22,12 @@
 
 .box-card-container {
  padding-left: 15px;
+}
+
+[data-bs-theme="dark"] .team-container {
+ background-color: #1C1C27;
+}
+
+[data-bs-theme="dark"] .box-card {
+ background-color: #212529 !important;
 }
