@@ -44,8 +44,8 @@
 }
 
 .comment-img {
- width: 60px !important;
- height: 60px !important;
+ width: 65px !important;
+ height: 65px !important;
  border-radius: 50%;
 }
 
@@ -54,9 +54,14 @@
  margin-top: 20px;
 }
 
+[data-bs-theme="dark"] .odd,
+[data-bs-theme="dark"] .even {
+ background-color: #1C1C27;
+}
+
 @media (min-width: 769px) {
  .commentSwiper {
-  width: 80% !important;
+  width: 70% !important;
   height: 70vh;
  }
 }

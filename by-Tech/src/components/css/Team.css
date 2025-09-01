@@ -1,0 +1,24 @@
+.box {
+ background-color: #3D8D8D;
+ height: 90vh;
+}
+
+.box-card {
+ width: 340px;
+ height: 350px;
+ margin-top: 20px;
+}
+
+.box-card div {
+ width: 200px;
+ height: 200px;
+ border: 3px solid #4795A0;
+}
+
+.box-card h1 {
+ color: #4794B4;
+}
+
+.box-card-container {
+ padding-left: 15px;
+}
