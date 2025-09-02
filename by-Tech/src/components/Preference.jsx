@@ -53,7 +53,6 @@ function Preference() {
     <div className="text-center mb-5 d-flex flex-column gap-4">
      <h2 className="text-color">Niyə məhz byTech?</h2>
      <h4 className="text-color">Biz zəmanət veririk.</h4>
-     <h5 className="text-color">Xidmətimiz Sizi qane etməsə, 90 gün ərzində pulunuzu geri qaytaracayıq.</h5>
     </div>
 
     {/* Kartlar */}

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'remixicon/fonts/remixicon.css';
+import './App.css'
 import Header from './components/Header';
 import Zero from './components/Zero';
 import HeroSections from './components/HeroSections';
@@ -11,8 +13,8 @@ import SwiperComponent from './components/SwiperComponent';
 import Offer from './components/Offer';
 import CommentSwiper from './components/CommentSwiper';
 import Team from './components/Team';
-import 'remixicon/fonts/remixicon.css';
-import './App.css'
+import Advertising from './components/Advertising';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
       <Offer />
       <CommentSwiper />
       <Team />
+      <Advertising />
+      <Footer />
     </>
   )
 }
