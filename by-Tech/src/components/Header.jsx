@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Logo from "../assets/logo.jpeg";
 import './css/Header.css';
 
-export default function Header() {
+function Header({ language, setLanguage }) {
  const [darkMode, setDarkMode] = useState(() => {
   return localStorage.getItem("theme") === "dark";
  });
@@ -16,6 +16,29 @@ export default function Header() {
    localStorage.setItem("theme", "light");
   }
  }, [darkMode]);
+
+ const translations = {
+  AZ: {
+   home: "Ana Səhifə",
+   services: "Xidmətlər",
+   about: "Haqqımızda",
+   careers: "Vakansiya",
+   contact: "Əlaqə"
+  },
+  EN: {
+   home: "Home",
+   services: "Services",
+   about: "About Us",
+   careers: "Vacancy",
+   contact: "Contact"
+  }
+ };
+
+ const handleLanguageChange = (e) => {
+  const selectedLang = e.target.value;
+  setLanguage(selectedLang);
+  localStorage.setItem("language", selectedLang);
+ };
 
  return (
   <header>
@@ -33,19 +56,22 @@ export default function Header() {
      >
       <span className="navbar-toggler-icon"></span>
      </button>
+
      <div className="collapse navbar-collapse justify-content-between" id="navbarContent">
       <ul className="navbar-nav mx-auto mb-2 mb-lg-0 fs-5">
-       <li className="nav-item"><a className="nav-link fw-bold" href="#">Ana Səhifə</a></li>
-       <li className="nav-item"><a className="nav-link fw-bold" href="#services">Xidmətlər</a></li>
-       <li className="nav-item"><a className="nav-link fw-bold" href="#">Haqqımızda</a></li>
-       <li className="nav-item"><a className="nav-link fw-bold" href="#">Vakansiya</a></li>
-       <li className="nav-item"><a className="nav-link fw-bold" href="#">Əlaqə</a></li>
+       <li className="nav-item"><a className="nav-link fw-bold" href="#">{translations[language].home}</a></li>
+       <li className="nav-item"><a className="nav-link fw-bold" href="#services">{translations[language].services}</a></li>
+       <li className="nav-item"><a className="nav-link fw-bold" href="#">{translations[language].about}</a></li>
+       <li className="nav-item"><a className="nav-link fw-bold" href="#">{translations[language].careers}</a></li>
+       <li className="nav-item"><a className="nav-link fw-bold" href="#">{translations[language].contact}</a></li>
       </ul>
+
       <div className="d-flex align-items-center gap-3">
-       <select className="form-select py-1">
-        <option>AZ</option>
-        <option>EN</option>
+       <select className="form-select py-1" value={language} onChange={handleLanguageChange}>
+        <option value="AZ">AZ</option>
+        <option value="EN">EN</option>
        </select>
+
        <div className="form-check form-switch">
         <input
          className="form-check-input"
@@ -59,9 +85,12 @@ export default function Header() {
         </label>
        </div>
       </div>
+
      </div>
     </div>
    </nav>
   </header>
  );
 }
+
+export default Header;

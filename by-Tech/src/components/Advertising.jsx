@@ -4,16 +4,28 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
 import './css/Advertising.css';
-import img1 from "../assets/metro.png"
-import img2 from "../assets/azerpoct.png"
-import img3 from "../assets/azersun.jpg"
-import img4 from "../assets/kapital.jpg"
-import img5 from "../assets/nar.jpeg"
+import img1 from "../assets/metro.png";
+import img2 from "../assets/azerpoct.png";
+import img3 from "../assets/azersun.jpg";
+import img4 from "../assets/kapital.jpg";
+import img5 from "../assets/nar.jpeg";
 
-function Advertising() {
+function Advertising({ language }) {
+ const translations = {
+  AZ: {
+   heading: "Müştərilərimiz"
+  },
+  EN: {
+   heading: "Our Clients"
+  }
+ };
+
+ const clients = [img1, img2, img3, img4, img5, img1, img2];
+ const content = translations[language] || translations.AZ;
+
  return (
   <div>
-   <h1 className='text-center fs-2 fw-bold mt-5'>Müştərilərimiz</h1>
+   <h1 className='text-center fs-2 fw-bold mt-5'>{content.heading}</h1>
    <Swiper
     spaceBetween={30}
     pagination={{ clickable: true }}
@@ -26,13 +38,11 @@ function Advertising() {
      768: { slidesPerView: 3 }
     }}
    >
-    <SwiperSlide className="advertising-slide"><img src={img1} alt="" /></SwiperSlide>
-    <SwiperSlide className="advertising-slide"><img src={img2} alt="" /></SwiperSlide>
-    <SwiperSlide className="advertising-slide"><img src={img3} alt="" /></SwiperSlide>
-    <SwiperSlide className="advertising-slide"><img src={img4} alt="" /></SwiperSlide>
-    <SwiperSlide className="advertising-slide"><img src={img5} alt="" /></SwiperSlide>
-    <SwiperSlide className="advertising-slide"><img src={img1} alt="" /></SwiperSlide>
-    <SwiperSlide className="advertising-slide"><img src={img2} alt="" /></SwiperSlide>
+    {clients.map((client, index) => (
+     <SwiperSlide key={index} className="advertising-slide">
+      <img src={client} alt={`Client ${index + 1}`} />
+     </SwiperSlide>
+    ))}
    </Swiper>
   </div>
  );

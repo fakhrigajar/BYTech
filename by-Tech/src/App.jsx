@@ -1,7 +1,7 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'remixicon/fonts/remixicon.css';
-import './App.css'
+import './App.css';
 import Header from './components/Header';
 import Zero from './components/Zero';
 import HeroSections from './components/HeroSections';
@@ -17,23 +17,32 @@ import Advertising from './components/Advertising';
 import Footer from './components/Footer';
 
 function App() {
+  const [language, setLanguage] = useState(() => {
+    return localStorage.getItem("language") || "AZ";
+  });
+
+  const changeLanguage = (lang) => {
+    setLanguage(lang);
+    localStorage.setItem("language", lang);
+  };
+
   return (
     <>
-      <Header />
-      <HeroSections />
+      <Header language={language} setLanguage={changeLanguage} />
+      <HeroSections language={language} />
       <SwiperComponent />
-      <Zero />
-      <Services />
+      <Zero language={language} />
+      <Services language={language} />
       <ScrollTopButton />
       <Social />
-      <Preference />
-      <Offer />
-      <CommentSwiper />
-      <Team />
-      <Advertising />
-      <Footer />
+      <Preference language={language} />
+      <Offer language={language} />
+      <CommentSwiper language={language} />
+      <Team language={language} />
+      <Advertising language={language} />
+      <Footer language={language} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
