@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'remixicon/fonts/remixicon.css';
 import './App.css';
 import Header from './components/Header';
-import Zero from './components/Zero';
 import HeroSections from './components/HeroSections';
+import Zero from './components/Zero';
 import Services from './components/Services';
 import ScrollTopButton from './components/ScrollTopButton';
 import Social from './components/Social';
@@ -15,20 +16,18 @@ import CommentSwiper from './components/CommentSwiper';
 import Team from './components/Team';
 import Advertising from './components/Advertising';
 import Footer from './components/Footer';
+import About from './components/About';
 
 function App() {
-  const [language, setLanguage] = useState(() => {
-    return localStorage.getItem("language") || "AZ";
-  });
+  const [language, setLanguage] = useState(() => localStorage.getItem("language") || "AZ");
 
   const changeLanguage = (lang) => {
     setLanguage(lang);
     localStorage.setItem("language", lang);
   };
 
-  return (
+  const HomePage = () => (
     <>
-      <Header language={language} setLanguage={changeLanguage} />
       <HeroSections language={language} />
       <SwiperComponent />
       <Zero language={language} />
@@ -42,6 +41,16 @@ function App() {
       <Advertising language={language} />
       <Footer language={language} />
     </>
+  );
+
+  return (
+    <Router>
+      <Header language={language} setLanguage={changeLanguage} />
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
   );
 }
 
